@@ -28,7 +28,7 @@
     <div class="article_content">{{ article.content|djangomarkdown }}
     
     <br />
-    <p style="color: #DEDEDE; float: right;">Permalink [<a style="color: #DEDEDE" href="http://sleepycat.org/blog/{{ article.id }}">http://sleepycat.org/blog/{{ article.id }}</a>]</p>
+    <p style="color: #DEDEDE; float: right;">Permalink [<a style="color: #DEDEDE" href="/{{ article.id }}">http://192.168.9.224:82/{{ article.id }}</a>]</p>
     
     <br />
     </div>
@@ -106,7 +106,7 @@
     <div class="article2">
     <div class="submit_comment">
     <h3 class="comment">发表评论</h3>
-    <form action="{% url 'blog:submit-comment' article.id %}" method="post">
+    <form action="{% url 'submit-comment' article.id %}" method="post">
         {% csrf_token %}
         <p id="reply_to_user"></p>
         
@@ -137,8 +137,8 @@
         
         <p>
         <label>验证信息：</label>
-        <input name="verify_message" type="text" title="请输入: sleepycat.org" required />
-        <label>&nbsp;[请输入本站域名： sleepycat.org]&nbsp;</label>
+        <input name="verify_message" type="text" title="请输入: pyfeng.com" required />
+        <label>&nbsp;[请输入本站域名： pyfeng.com]&nbsp;</label>
         <input type="submit" class="submit_button" value="提交评论"  />
         </p>
         

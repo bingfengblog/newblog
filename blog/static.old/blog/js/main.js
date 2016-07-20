@@ -1,6 +1,6 @@
 function replyto(id, user)
 {
-    document.getElementById("reply_to_user").innerHTML = "回复：<span style='color:#2099AB; font-weight: bold;'>" + user + "</span>&nbsp;<a href='#reply_to_user' onclick='cancelreply()' style='color: #BABABA;text-decoration: none;'>(撤消)</a>";
+    document.getElementById("reply_to_user").innerHTML = "评论回复：&nbsp;<span style='color:#2099AB; font-weight: bold;'>" + user + "</span>&nbsp;<a href='#reply_to_user' onclick='cancelreply()' style='color: #BABABA;text-decoration: none;'>[撤消]</a>";
     document.getElementById("reply_to_comment").value = id;
 }
 
@@ -59,14 +59,8 @@ function loadall(id){
            'ajax_id': id,
       },
       success: function(data){
-            
     	  $("#"+id).html(data)
     	  $("#link_"+id).hide()
-          $(document).ready(function() {
-          $('pre code').each(function(i, block) {
-             hljs.highlightBlock(block);
-             });
-          });
       },
       error: function(XMLHttpRequest, textStatus, errorThrown){
     	  alert("IS Error: " + errorThrown + XMLHttpRequest.responseText); 
@@ -74,6 +68,7 @@ function loadall(id){
    });
    
 }
+
 
 
 

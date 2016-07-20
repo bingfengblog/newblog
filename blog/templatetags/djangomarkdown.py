@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # import markdown2
-import markdown
+import markdown2
 from django import template
 from django.template.defaultfilters import stringfilter
 #from django.utils.encoding import force_unicode
@@ -17,11 +17,8 @@ def djangomarkdown(value):
     http://www.dominicrodger.com/django-markdown.html
     '''
     
-
-    return mark_safe(markdown.markdown(value,
-                                        extras=["code-friendly"]
-                                        )
-                     )
+    return mark_safe(markdown2.markdown(value,extras=["code-friendly"]))
+#    return mark_safe(markdown2.markdown(value,extras=["'wiki-tables'"]))
 
 
 if __name__ == "__main__":
@@ -39,7 +36,7 @@ if __name__ == "__main__":
     '''
     
     #html = markdown2.markdown(mystring, extras=["xml"])
-    html = markdown.markdown(mystring, extras=["code-friendly"])
+    html = markdown2.markdown(mystring, extras=["code-friendly"])
     print(html)
 
 

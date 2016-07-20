@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 import datetime
 
-import markdown
+import markdown2
 
 from blog.models import Article, Tag, Comment, CommentForm
 
@@ -172,7 +172,7 @@ def article(request, article_id, tag_slug=""):
             return HttpResponse('Error From Server')
         
         article  = Article.objects.get(id=ajax_id)
-        return HttpResponse(markdown.markdown(article.content, extras=["code-friendly"]), content_type="text/plain")
+        return HttpResponse(markdown2.markdown(article.content, extras=["code-friendly"]), content_type="text/plain")
     
     
     
@@ -230,7 +230,7 @@ def article(request, article_id, tag_slug=""):
 
 def comment(request, article_id):
     if request.method == "POST":
-        if request.POST['verify_message'].strip() == "sleepycat.org":
+        if request.POST['verify_message'].strip() == "pyfeng.com":
             f = CommentForm(request.POST)
             
             if f.is_valid():
@@ -270,7 +270,7 @@ def comment(request, article_id):
                 return render(request, 'blog/error.html', context)
         #not "sleepycat.org"
         else:
-            errmsg = u"Verification Message Error. Please Input: sleepycat.org"
+            errmsg = u"Verification Message Error. Please Input: pyfeng.com"
             
             articles = Article.objects.order_by('datetime').reverse()
             tags     = Tag.objects.order_by('weight')
