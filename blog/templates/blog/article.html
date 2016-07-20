@@ -1,0 +1,170 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+{% load djangomarkdown %}
+
+{% block title %}{{ article.title|safe }} | 冰峰世界{% endblock %}
+
+{% block navigator %}
+    <li><a href="/" {% if article.id != 1 %} class="active" {% endif %}>首页</a></li>
+    <li><a href="/blog/archive">存档</a></li>
+    <li><a href="/blog/1/" {% if article.id == 1 %} class="active" {% endif %}>关于</a></li>
+{% endblock %}
+
+
+{% block content %}
+<div class="content">
+    <div class="article">
+    
+    <div class="article_header"><a title="{{ article.title }}"  href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
+    
+    
+    <div class="article_tags">
+        {% for tag in article.tags.all %}
+        <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %} ><span>&bull;</span>{{ tag.title }}</a>
+        {% endfor %}
+    </div>
+    
+    <div class="article_datetime"><span>&bull;</span>{{ article.datetime|date:"Y-m-d H:i" }}</div>
+    <div class="article_content">{{ article.content|djangomarkdown }}
+    
+    <br />
+    <p style="color: #DEDEDE; float: right;">Permalink [<a style="color: #DEDEDE" href="http://sleepycat.org/blog/{{ article.id }}">http://sleepycat.org/blog/{{ article.id }}</a>]</p>
+    
+    <br />
+    </div>
+    </div>
+    
+    
+    
+    {% if comments %}
+    <div class="article2">
+    <div class="article_comments">
+    <h3 class="comment">评论区</h3>
+    {% for comment in comments %}
+    
+        {% if not comment.to_comment %}
+        <div class="each_cmt">
+            <p class="top">
+                {% if comment.website == '' %}
+                    <span>{{ comment.user }}</span>
+                {% else %}
+                    <a href="{{ comment.website }}" style="text-decoration: underline;">{{ comment.user }}</a>
+                {% endif %}
+                
+                &nbsp;
+                
+               {% if comment.is_blog_author %}
+                   <span style="background-color: #2099AB; color: #ffffff; display: inline-block; border-radius: 2px;">&nbsp;Blog Author&nbsp;</span>
+                   &nbsp;
+               {% endif %}
+                
+                
+                
+                <span class="datetime">{{ comment.datetime|date:"Y-m-d H:i" }}&nbsp;&nbsp;<a href="#reply_to_user" onclick="replyto('{{ comment.id }}', '{{ comment.user }}')" class="reply">在此条评论下回复&nbsp;▼&nbsp;</a></span>
+            </p>
+            
+            <div>{{ comment.content|linebreaksbr }}</div>
+        </div>
+        {% endif %}
+        
+        {% for subcomment in allcomments %}
+            {% if subcomment.to_comment == comment %}
+                <div class="subcomment">
+                <div class="each_cmt">
+                    <p class="top">
+                        {% if subcomment.website == '' %}
+                            <span>{{ subcomment.user }}</span>
+                        {% else %}
+                            <a href="{{ subcomment.website }}" style="text-decoration: underline;">{{ subcomment.user }}</a>
+                        {% endif %}
+                        
+                        &nbsp;
+                        
+                        {% if subcomment.is_blog_author %}
+                            <span style="background-color: #2099AB; color: #ffffff; display: inline-block; border-radius: 2px;">&nbsp;Blog Author&nbsp;</span>
+                        {% endif %}
+                        
+                        <span class="datetime">{{ subcomment.datetime|date:"Y-m-d H:i" }}</span>
+                    </p>
+                    
+                    <div>{{ subcomment.content|linebreaksbr }}</div>
+                </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        
+        <p style="height: 5px; margin: 0px; padding: 0px;">&nbsp;</p>
+    
+    
+    {% endfor %}
+    </div>
+    </div>
+    {% endif %}
+    
+    
+    
+    <div class="article2">
+    <div class="submit_comment">
+    <h3 class="comment">发表评论</h3>
+    <form action="{% url 'blog:submit-comment' article.id %}" method="post">
+        {% csrf_token %}
+        <p id="reply_to_user"></p>
+        
+        <p>
+        <label>尊姓大名：</label>
+        <input id="id_user" name="user" type="text" placeholder="" title="尊姓大名" required />
+        </p>
+        
+        
+        
+        <p>
+        <label>评论内容：</label>
+        <textarea id="id_content" name="content" style="vertical-align:text-top; width:600px; height:100px; border:1px solid #EEEEEE;" placeholder="" title="评论内容" id="id_comment" rows="10" cols="40" required></textarea>
+        </p>
+        
+        
+        
+        <p>
+        <label>电子邮箱：</label>
+        <input id="id_email"   name="email"   type="text" placeholder="" title="电子邮箱(选填)" />
+        <label>&nbsp;[选填]</label>
+        </p>
+        <p>
+        <label>个人主页：</label>
+        <input id="id_website" name="website" type="text" placeholder="" title="个人主页、微博等(选填)" />
+        <label>&nbsp;[选填]</label>
+        </p>
+        
+        <p>
+        <label>验证信息：</label>
+        <input name="verify_message" type="text" title="请输入: sleepycat.org" required />
+        <label>&nbsp;[请输入本站域名： sleepycat.org]&nbsp;</label>
+        <input type="submit" class="submit_button" value="提交评论"  />
+        </p>
+        
+        <input type="hidden" name="to_comment_id" id="reply_to_comment" value="" />
+    </form>
+    </div>
+    </div>
+
+
+
+    {% if comments.paginator.num_pages > 1 %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if comments.has_previous %}<a href="?page=1">首页</a>{% else %}<span class="deactive">首页</span>{% endif %}
+            
+            {% if comments.has_previous %}<a href="?page={{ comments.previous_page_number }}">上一页</a>{% else %}<span class="deactive">上一页</span>{% endif %}
+    
+            <span class="currentpage">当前页码 {{ comments.number }}/{{ comments.paginator.num_pages }}, 本页共 {{ comments|length }} 篇评论。</span>
+           
+            {% if comments.has_next %}<a href="?page={{ comments.next_page_number }}">下一页</a>{% else %}<span class="deactive">下一页</span>{% endif %}
+            
+            {% if comments.has_next %}<a href="?page={{ comments.paginator.num_pages }}">尾页</a>{% else %}<span class="deactive">尾页</span>{% endif %}
+        </span>
+    </div>
+    {% endif %}
+
+
+</div>
+{% endblock %}

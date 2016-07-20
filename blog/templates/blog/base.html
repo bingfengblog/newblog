@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8" />
+    <meta name="baidu-site-verification" content="EsdTr3rGZ5" />
+    <title>{% block title %}首页 | 冰峰世界{% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}" />
+    <script src="{% static 'blog/js/jquery-2.1.0.min.js' %}" type="text/javascript" ></script>
+    <script src="{% static 'blog/js/main.js' %}" type="text/javascript" ></script>
+    
+    <link rel="Shortcut Icon" href="{% static 'blog/image/sleepycat.ico' %}" />
+    <link rel="Bookmark" href="{% static 'blog/image/sleepycat.ico' %}" />
+</head>
+
+
+<body>
+<body>
+
+<div class="header">
+<div class="wrap">
+    <div class="logo">
+        <img src="{% static 'blog/image/logo.jpg' %}" alt="sleepycat.org"></img>
+    </div>
+    
+    <div class="title">
+        <p class="title">冰峰世界</p>
+        <p class="moto">In me the tiger,Sniffs the rose</p>
+    </div>
+    
+    <div class="search">
+    </div>
+</div>
+</div>
+
+<div class="nav">
+<div class="wrap">
+    <ul class="menu">
+        {% block navigator %}
+        <li><a href="/" class="active">首页</a></li>
+        <li><a href="/blog/archive">存档</a></li>
+        <li><a href="/blog/1/">关于</a></li>
+        {% endblock %}
+    </ul>
+</div>
+</div>
+
+
+
+<div class="wrap">
+    {% block content %}{% endblock %}
+    
+    <a href="#" onclick="GoTop();return false;"><img style="position: fixed; bottom:160px; border: none;" alt="top" src="{% static 'blog/image/up.gif' %}"></img></a>
+    <a href="#bottom" onclick="GoBottom();return false;"><img style="position: fixed; bottom:120px;border: none;" alt="bottom" src="{% static 'blog/image/down.gif' %}"></img></a>
+    <div class="sidebar">
+        {% if tags %}
+        <h3>文章分类</h3>
+            {% for tag in tags %}
+            <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %}>{{ tag.title }}<span>{{ tag.articles }}</span></a>
+            {% endfor %}
+        {% endif %}
+        <br />
+        <h3>最新评论</h3>
+            {% for cmt in recentcmts %}
+            <div class="recentcmt">
+            <p>{{ cmt.content }} <span style="color: #DDDDDD; display: inline-block;">{{ cmt.datetime|date:"Y-m-d H:i" }}</span></p>
+            <p><span style="font-weight: bold">{% if cmt.website != '' %}<a href="{{ cmt.website }}" style="text-decoration: underline;font-weight: bold;">{{ cmt.user }}</a>{% else %}{{ cmt.user }}{% endif %}</span> 评论了
+            <a href="/blog/{{ cmt.to_article.id }}">{{ cmt.to_article.title }}</a></p>
+            
+            </div>
+            {% endfor %}
+        <br />
+    </div>
+    
+
+</div>
+<div class="footer">
+<a href="http://www.djangoproject.com/"><img src="{% static 'blog/image/djangoproject120_25_grey.gif' %}" border="0" alt="A Django project." title="A Django project." /></a>
+
+<p id="bottom">©2010-2014 闲逸笔记</p>
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8b10321ea18c9ff988a1fc1012778162' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+
+
+
+</body>
+</html>
+

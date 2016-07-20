@@ -1,0 +1,57 @@
+{% extends "blog/base.html" %}
+{% load djangomarkdown %}
+
+{% block title %}{% if active_tag %}标签: {{ active_tag.title }}{% else %}首页{% endif %} | 冰峰世界{% endblock %}
+
+{% block navigator %}
+    <li><a href="/" class="active">首页</a></li>
+    <li><a href="/blog/archive">存档</a></li>
+    <li><a href="/blog/1/">关于</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+{% if articles %}
+    {% for article in articles %}
+    <div class="article">
+    
+    <div class="article_header"><a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
+    
+    <div class="article_tags">
+        {% for tag in article.tags.all %}
+        <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %} ><span>&bull;</span>{{ tag.title }}</a>
+        {% endfor %}
+    </div>
+    
+    <div class="article_datetime"><span>&bull;</span>{{ article.datetime|date:"Y-m-d H:i" }}</div>
+    
+    <div id="{{ article.id }}" class="article_content">{{ article.content|truncatewords_html:30|djangomarkdown }}</div>
+
+    <div class="article_comment">
+    {% ifnotequal article.content|truncatewords_html:30|length article.content|truncatewords_html:31|length %}
+    <a id="link_{{ article.id }}" class="readmore" href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}" onclick="loadall({{ article.id }}); return false;">▼&nbsp;&nbsp;展开全文...</a>
+    {% endifnotequal %}
+    <a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}#bottom">评论({{ article.cmts }})</a>
+    </div>
+    </div>
+    
+    {% endfor %}
+{% endif %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if articles.has_previous %}<a href="?page=1">首页</a>{% else %}<span class="deactive">首页</span>{% endif %}
+            
+            {% if articles.has_previous %}<a href="?page={{ articles.previous_page_number }}">上一页</a>{% else %}<span class="deactive">上一页</span>{% endif %}
+    
+            <span class="currentpage">当前页码 {{ articles.number }}/{{ articles.paginator.num_pages }}, 本页共 {{ articles|length }} 篇文章。</span>
+           
+            {% if articles.has_next %}<a href="?page={{ articles.next_page_number }}">下一页</a>{% else %}<span class="deactive">下一页</span>{% endif %}
+            
+            {% if articles.has_next %}<a href="?page={{ articles.paginator.num_pages }}">尾页</a>{% else %}<span class="deactive">尾页</span>{% endif %}
+        </span>
+    </div>
+
+
+</div>
+{% endblock %}

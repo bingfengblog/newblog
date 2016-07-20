@@ -1,0 +1,55 @@
+{% extends "blog/base.html" %}
+
+{% block title %}存档 | 冰峰世界{% endblock %}
+
+{% block navigator %}
+    <li><a href="/">首页</a></li>
+    <li><a href="/blog/archive" class="active">存档</a></li>
+    <li><a href="/blog/1/">关于</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<div class="article">
+    <div class="article_header"><a href="/blog/archive">全部文章</a></div>
+    <div class="article_content" style="">
+    {% if articles %}
+        {% for article in articles %}
+        
+        <p style="font-size: 14px; line-height: 16px; text-indent: 0px; margin: 10px 0px 5px 0px; padding: 0px 0px 2px 0px; ">
+        
+        {{ article.datetime|date:"Y-m-d" }} &nbsp;
+        <a title="{% for tag in article.tags.all %}{{ tag.title }} {% endfor %}" href="/blog/{{ article.id }}" style="font-weight: normal; display: inline-table; width: 580px; vertical-align: top;">{{ article.title }}</a>
+        
+        &nbsp;评论({{ article.cmts }})
+        <!-- 
+        <div style="float: right">标签：
+        {% for tag in article.tags.all %}
+        <a href="/blog/tag-{{ tag.slug }}">{{ tag.title }}</a>
+        {% endfor %}
+        </div> -->
+        
+        {% endfor %}
+        
+        </p>
+    {% endif %}
+    </div>
+</div>
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if articles.has_previous %}<a href="?page=1">首页</a>{% else %}<span class="deactive">首页</span>{% endif %}
+            
+            {% if articles.has_previous %}<a href="?page={{ articles.previous_page_number }}">上一页</a>{% else %}<span class="deactive">上一页</span>{% endif %}
+    
+            <span class="currentpage">当前页码 {{ articles.number }}/{{ articles.paginator.num_pages }}, 本页共 {{ articles|length }} 篇文章。</span>
+           
+            {% if articles.has_next %}<a href="?page={{ articles.next_page_number }}">下一页</a>{% else %}<span class="deactive">下一页</span>{% endif %}
+            
+            {% if articles.has_next %}<a href="?page={{ articles.paginator.num_pages }}">尾页</a>{% else %}<span class="deactive">尾页</span>{% endif %}
+        </span>
+    </div>
+
+
+</div>
+{% endblock %}

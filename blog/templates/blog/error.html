@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+{% block title %}错误 | 冰峰世界{% endblock %}
+
+{% block navigator %}
+    <li><a href="/">首页</a></li>
+    <li><a href="/blog/archive">存档</a></li>
+    <li><a href="/blog/1/">关于</a></li>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+<div class="article">
+    <div class="article_header"><a href="#">出错了...</a></div>
+    <div class="article_content">
+    {% if f %}
+        <p>{{ f.errors }}</p>
+    {% endif %}
+    {% if errmsg %}
+        <ul class="errorlist"><li>Error Message<ul class="errorlist"><li>{{ errmsg }}</li></ul>
+    {% endif %}
+    {% if err404 %}
+        <p>404 not found. Page not exist, or has been changed or removed.</p>
+        <img src="{% static 'blog/image/404.gif' %}"  alt=""></img>
+    {% endif %}
+    {% if err500 %}
+        <p> Error 500 </p>
+    {% endif %}
+    </div>
+</div>
+
+
+
+</div>
+{% endblock %}
