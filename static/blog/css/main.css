@@ -456,10 +456,10 @@ div.article_comment{
 }
 
 .article_header  a {
-    font-size: 16px;
+    font-size: 24px;
     color: #DB7C00;
     display: block;
-    padding: 17px 5px 3px 5px;
+    padding: 12px 5px 3px 5px;
     margin: 20px 0px 0px 0px;
     font-weight: bolder;
     overflow: hidden;
@@ -469,7 +469,7 @@ div.article_comment{
     height: 28px;
 }
 .article_header a:hover{
-    color: #DB7C00;
+    color: #FF9C00;
 }
 
 
