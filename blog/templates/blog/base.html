@@ -67,8 +67,8 @@
             {% for cmt in recentcmts %}
             <div class="recentcmt">
             <p>{{ cmt.content }} <span style="color: #DDDDDD; display: inline-block;">{{ cmt.datetime|date:"Y-m-d H:i" }}</span></p>
-            <p><span style="font-weight: bold">{% if cmt.website != '' %}<a href="{{ cmt.website }}" style="text-decoration: underline;font-weight: bold;">{{ cmt.user }}</a>{% else %}{{ cmt.user }}{% endif %}</span> 评论了
-            <a href="/blog/{{ cmt.to_article.id }}">{{ cmt.to_article.title }}</a></p>
+            <p><span style="font-weight: bold;color:#2196F3;">{% if cmt.website != '' %}<a href="{{ cmt.website }}" style="text-decoration: underline;font-weight: bold;color:#2196F3;">{{ cmt.user }}</a>{% else %}{{ cmt.user }}{% endif %}</span> 评论了
+            <a style="color:#156741" href="/blog/{{ cmt.to_article.id }}">{{ cmt.to_article.title }}</a></p>
             
             </div>
             {% endfor %}

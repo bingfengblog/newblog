@@ -49,6 +49,7 @@ div {
 
 div.header{
     background-color: #066C75;
+//    background-color: #337AB7;
     color:#ffffff;
     height: 100px;
 }
@@ -224,6 +225,7 @@ div.article_content{
     margin: 10px 0px 10px 0px;
     font-size: 14px;
     line-height: 27px;
+//    min-height:600px;
 }
 
 

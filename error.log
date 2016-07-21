@@ -1,0 +1,129 @@
+[2016-07-21 10:36:24 +0000] [5932] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:36:24 +0000] [5932] [INFO] Listening at: http://127.0.0.1:8001 (5932)
+[2016-07-21 10:36:24 +0000] [5932] [INFO] Using worker: sync
+[2016-07-21 10:36:24 +0000] [5942] [INFO] Booting worker with pid: 5942
+[2016-07-21 10:36:24 +0000] [5943] [INFO] Booting worker with pid: 5943
+[2016-07-21 10:38:42 +0000] [5932] [INFO] Handling signal: int
+[2016-07-21 22:38:42 +0000] [5942] [INFO] Worker exiting (pid: 5942)
+[2016-07-21 22:38:42 +0000] [5943] [INFO] Worker exiting (pid: 5943)
+[2016-07-21 10:38:42 +0000] [5932] [INFO] Shutting down: Master
+[2016-07-21 10:38:43 +0000] [6315] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:38:43 +0000] [6315] [INFO] Listening at: http://127.0.0.1:8001 (6315)
+[2016-07-21 10:38:43 +0000] [6315] [INFO] Using worker: sync
+[2016-07-21 10:38:43 +0000] [6325] [INFO] Booting worker with pid: 6325
+[2016-07-21 10:38:43 +0000] [6326] [INFO] Booting worker with pid: 6326
+/usr/local/bbx_it/lib/python2.7/site-packages/django/template/utils.py:37: RemovedInDjango110Warning: You haven't defined a TEMPLATES setting. You must do so before upgrading to Django 1.10. Otherwise Django will be unable to load templates.
+  "unable to load templates.", RemovedInDjango110Warning)
+
+/usr/local/nginx/sleepycat/blog/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^tag-(?P<tag_slug>\w+)/(?P<article_id>\d+)/submit-comment$', views.comment, name='tag-comment'),
+
+/usr/local/nginx/sleepycat/sleepycat/urls.py:21: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
+
+Not Found: /AAD
+Not Found: /AAD
+Not Found: /AAD
+/usr/local/bbx_it/lib/python2.7/site-packages/django/template/utils.py:37: RemovedInDjango110Warning: You haven't defined a TEMPLATES setting. You must do so before upgrading to Django 1.10. Otherwise Django will be unable to load templates.
+  "unable to load templates.", RemovedInDjango110Warning)
+
+/usr/local/nginx/sleepycat/blog/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^tag-(?P<tag_slug>\w+)/(?P<article_id>\d+)/submit-comment$', views.comment, name='tag-comment'),
+
+/usr/local/nginx/sleepycat/sleepycat/urls.py:21: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
+
+[2016-07-21 10:42:24 +0000] [6315] [INFO] Handling signal: int
+[2016-07-21 22:42:24 +0000] [6325] [INFO] Worker exiting (pid: 6325)
+[2016-07-21 22:42:24 +0000] [6326] [INFO] Worker exiting (pid: 6326)
+[2016-07-21 10:42:24 +0000] [6315] [INFO] Shutting down: Master
+[2016-07-21 10:42:26 +0000] [6901] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:42:26 +0000] [6901] [INFO] Listening at: http://127.0.0.1:8001 (6901)
+[2016-07-21 10:42:26 +0000] [6901] [INFO] Using worker: sync
+[2016-07-21 10:42:26 +0000] [6911] [INFO] Booting worker with pid: 6911
+[2016-07-21 10:42:26 +0000] [6912] [INFO] Booting worker with pid: 6912
+/usr/local/nginx/sleepycat/blog/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^tag-(?P<tag_slug>\w+)/(?P<article_id>\d+)/submit-comment$', views.comment, name='tag-comment'),
+
+/usr/local/nginx/sleepycat/sleepycat/urls.py:21: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
+
+/usr/local/nginx/sleepycat/blog/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^tag-(?P<tag_slug>\w+)/(?P<article_id>\d+)/submit-comment$', views.comment, name='tag-comment'),
+
+/usr/local/nginx/sleepycat/sleepycat/urls.py:21: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
+
+[2016-07-21 10:43:45 +0000] [6901] [INFO] Handling signal: int
+[2016-07-21 22:43:45 +0000] [6912] [INFO] Worker exiting (pid: 6912)
+[2016-07-21 22:43:45 +0000] [6911] [INFO] Worker exiting (pid: 6911)
+[2016-07-21 10:43:45 +0000] [6901] [INFO] Shutting down: Master
+[2016-07-21 10:43:47 +0000] [7128] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:43:47 +0000] [7128] [INFO] Listening at: http://127.0.0.1:8001 (7128)
+[2016-07-21 10:43:47 +0000] [7128] [INFO] Using worker: sync
+[2016-07-21 10:43:47 +0000] [7138] [INFO] Booting worker with pid: 7138
+[2016-07-21 10:43:47 +0000] [7139] [INFO] Booting worker with pid: 7139
+/usr/local/nginx/sleepycat/blog/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^tag-(?P<tag_slug>\w+)/(?P<article_id>\d+)/submit-comment$', views.comment, name='tag-comment'),
+
+/usr/local/nginx/sleepycat/blog/urls.py:12: RemovedInDjango110Warning: django.conf.urls.patterns() is deprecated and will be removed in Django 1.10. Update your urlpatterns to be a list of django.conf.urls.url() instances instead.
+  url(r'^tag-(?P<tag_slug>\w+)/(?P<article_id>\d+)/submit-comment$', views.comment, name='tag-comment'),
+
+[2016-07-21 10:44:56 +0000] [7128] [INFO] Handling signal: int
+[2016-07-21 22:44:56 +0000] [7138] [INFO] Worker exiting (pid: 7138)
+[2016-07-21 22:44:56 +0000] [7139] [INFO] Worker exiting (pid: 7139)
+[2016-07-21 10:44:56 +0000] [7128] [INFO] Shutting down: Master
+[2016-07-21 10:44:58 +0000] [7343] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:44:58 +0000] [7343] [INFO] Listening at: http://127.0.0.1:8001 (7343)
+[2016-07-21 10:44:58 +0000] [7343] [INFO] Using worker: sync
+[2016-07-21 10:44:58 +0000] [7353] [INFO] Booting worker with pid: 7353
+[2016-07-21 10:44:58 +0000] [7355] [INFO] Booting worker with pid: 7355
+[2016-07-21 10:48:10 +0000] [7343] [INFO] Handling signal: int
+[2016-07-21 22:48:10 +0000] [7353] [INFO] Worker exiting (pid: 7353)
+[2016-07-21 22:48:10 +0000] [7355] [INFO] Worker exiting (pid: 7355)
+[2016-07-21 10:48:10 +0000] [7343] [INFO] Shutting down: Master
+[2016-07-21 10:48:12 +0000] [7877] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:48:12 +0000] [7877] [INFO] Listening at: http://127.0.0.1:8001 (7877)
+[2016-07-21 10:48:12 +0000] [7877] [INFO] Using worker: sync
+[2016-07-21 10:48:12 +0000] [7890] [INFO] Booting worker with pid: 7890
+[2016-07-21 10:48:12 +0000] [7891] [INFO] Booting worker with pid: 7891
+[2016-07-21 10:55:41 +0000] [7877] [INFO] Handling signal: int
+[2016-07-21 22:55:41 +0000] [7891] [INFO] Worker exiting (pid: 7891)
+[2016-07-21 22:55:41 +0000] [7890] [INFO] Worker exiting (pid: 7890)
+[2016-07-21 10:55:41 +0000] [7877] [INFO] Shutting down: Master
+[2016-07-21 10:55:42 +0000] [9018] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:55:42 +0000] [9018] [INFO] Listening at: http://127.0.0.1:8001 (9018)
+[2016-07-21 10:55:42 +0000] [9018] [INFO] Using worker: sync
+[2016-07-21 10:55:42 +0000] [9033] [INFO] Booting worker with pid: 9033
+[2016-07-21 10:55:42 +0000] [9034] [INFO] Booting worker with pid: 9034
+[2016-07-21 10:55:54 +0000] [9085] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:55:54 +0000] [9085] [ERROR] Connection in use: ('127.0.0.1', 8001)
+[2016-07-21 10:55:54 +0000] [9085] [ERROR] Retrying in 1 second.
+[2016-07-21 10:55:55 +0000] [9085] [ERROR] Connection in use: ('127.0.0.1', 8001)
+[2016-07-21 10:55:55 +0000] [9085] [ERROR] Retrying in 1 second.
+[2016-07-21 10:55:56 +0000] [9085] [ERROR] Connection in use: ('127.0.0.1', 8001)
+[2016-07-21 10:55:56 +0000] [9085] [ERROR] Retrying in 1 second.
+[2016-07-21 10:55:57 +0000] [9085] [ERROR] Connection in use: ('127.0.0.1', 8001)
+[2016-07-21 10:55:57 +0000] [9085] [ERROR] Retrying in 1 second.
+[2016-07-21 10:55:58 +0000] [9085] [ERROR] Connection in use: ('127.0.0.1', 8001)
+[2016-07-21 10:55:58 +0000] [9085] [ERROR] Retrying in 1 second.
+[2016-07-21 10:55:59 +0000] [9085] [ERROR] Can't connect to ('127.0.0.1', 8001)
+[2016-07-21 10:56:04 +0000] [9134] [INFO] Starting gunicorn 19.6.0
+[2016-07-21 10:56:04 +0000] [9134] [ERROR] Connection in use: ('127.0.0.1', 8001)
+[2016-07-21 10:56:04 +0000] [9134] [ERROR] Retrying in 1 second.
+[2016-07-21 10:56:05 +0000] [9134] [INFO] Listening at: http://127.0.0.1:8001 (9134)
+[2016-07-21 10:56:05 +0000] [9134] [INFO] Using worker: sync
+[2016-07-21 10:56:05 +0000] [9144] [INFO] Booting worker with pid: 9144
+[2016-07-21 10:56:05 +0000] [9145] [INFO] Booting worker with pid: 9145
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 00:21:04.867261) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 00:35:21.739829) while time zone support is active.
+  RuntimeWarning)
+
+Not Found: /blog/1/
+Not Found: /blog/1/
+Not Found: /blog/1/
+Not Found: /blog/1/
+Not Found: /blog/1/
+Not Found: /blog/1/
