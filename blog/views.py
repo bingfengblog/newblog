@@ -17,23 +17,10 @@ from blog.models import Article, Tag, Comment, CommentForm
 def index(request, tag_slug=""):
     articles = Article.objects.order_by('datetime').reverse()
     tags     = Tag.objects.order_by('weight')
-    
-    # count articles in each tag. get active_tag
-    tag_articles = {}
-    for tag in tags:
-        tag_articles[tag.title] = 0
-    
-    for article in articles:
-        for tag in article.tags.all():
-            tag_articles[tag.title] += 1
-    
     active_tag = None
     for tag in tags:
-        tag.articles = tag_articles[tag.title]
         if tag.slug == tag_slug:
             active_tag = tag
-    
-    # filter articles by tag_slug
     if tag_slug != "":
         articles = articles.filter(tags__slug__exact=tag_slug)
         if active_tag == None:
@@ -62,7 +49,7 @@ def index(request, tag_slug=""):
     context  = {'articles': articles_this_page,
                 'tags': tags,
                 'active_tag': active_tag,
-                'recentcmts': Comment.objects.order_by('datetime').reverse()[:5], 
+                'recentcmts': Comment.objects.order_by('-datetime'),
                 }
     
     return render(request, 'blog/index.html', context)
@@ -72,17 +59,6 @@ def index(request, tag_slug=""):
 def err404(request):
     articles = Article.objects.order_by('datetime').reverse()
     tags     = Tag.objects.order_by('weight')
-    
-    tag_articles = {}
-    for tag in tags:
-        tag_articles[tag.title] = 0
-    
-    for a in articles:
-        for tag in a.tags.all():
-            tag_articles[tag.title] += 1
-    
-    for tag in tags:
-        tag.articles = tag_articles[tag.title]
     
     context  = {
                 'tags': tags,
@@ -95,17 +71,6 @@ def err404(request):
 def err500(request):
     articles = Article.objects.order_by('datetime').reverse()
     tags     = Tag.objects.order_by('weight')
-    
-    tag_articles = {}
-    for tag in tags:
-        tag_articles[tag.title] = 0
-    
-    for a in articles:
-        for tag in a.tags.all():
-            tag_articles[tag.title] += 1
-    
-    for tag in tags:
-        tag.articles = tag_articles[tag.title]
     
     context  = {
                 'tags': tags,
@@ -122,17 +87,6 @@ def archive(request):
     tags     = Tag.objects.order_by('weight')
     
     # count articles in each tag. get active_tag
-    tag_articles = {}
-    for tag in tags:
-        tag_articles[tag.title] = 0
-    
-    for article in articles:
-        for tag in article.tags.all():
-            tag_articles[tag.title] += 1
-    
-    for tag in tags:
-        tag.articles = tag_articles[tag.title]
-    
     
     # get articles of current page.
     p = Paginator(articles, 50)
@@ -191,17 +145,9 @@ def article(request, article_id, tag_slug=""):
     
     article.cmts = len(comments)
     # count articles in each tag. get active_tag
-    tag_articles = {}
-    for tag in tags:
-        tag_articles[tag.title] = 0
-    
-    for a in articles:
-        for tag in a.tags.all():
-            tag_articles[tag.title] += 1
-    
+
     active_tag = None
     for tag in tags:
-        tag.articles = tag_articles[tag.title]
         if tag.slug == tag_slug:
             active_tag = tag
     
@@ -250,17 +196,6 @@ def comment(request, article_id):
                 articles = Article.objects.order_by('datetime').reverse()
                 tags     = Tag.objects.order_by('weight')
                 
-                tag_articles = {}
-                for tag in tags:
-                    tag_articles[tag.title] = 0
-                
-                for a in articles:
-                    for tag in a.tags.all():
-                        tag_articles[tag.title] += 1
-                
-                for tag in tags:
-                    tag.articles = tag_articles[tag.title]
-                
                 context  = {
                             'tags': tags,
                             'recentcmts': Comment.objects.order_by('datetime').reverse()[:5], 
@@ -274,17 +209,6 @@ def comment(request, article_id):
             
             articles = Article.objects.order_by('datetime').reverse()
             tags     = Tag.objects.order_by('weight')
-            
-            tag_articles = {}
-            for tag in tags:
-                tag_articles[tag.title] = 0
-            
-            for a in articles:
-                for tag in a.tags.all():
-                    tag_articles[tag.title] += 1
-            
-            for tag in tags:
-                tag.articles = tag_articles[tag.title]
             
             context  = {
                         'tags': tags,

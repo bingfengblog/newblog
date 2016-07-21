@@ -59,7 +59,7 @@
         {% if tags %}
         <h3>文章分类</h3>
             {% for tag in tags %}
-            <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %}>{{ tag.title }}<span>{{ tag.articles }}</span></a>
+            <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %}>{{ tag.title }}<span>{{ tag.tags.count }}</span></a>
             {% endfor %}
         {% endif %}
         <br />
