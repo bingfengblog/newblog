@@ -60,7 +60,7 @@
                 
                 
                 
-                <span class="datetime">{{ comment.datetime|date:"Y-m-d H:i" }}&nbsp;&nbsp;<a href="#reply_to_user" onclick="replyto('{{ comment.id }}', '{{ comment.user }}')" class="reply">在此条评论下回复&nbsp;▼&nbsp;</a></span>
+                <span class="datetime">{{ comment.datetime|date:"Y-m-d H:i" }}&nbsp;&nbsp;<a style="color:#29B5FF;"href="#reply_to_user" onclick="replyto('{{ comment.id }}', '{{ comment.user }}')" class="reply">在此条评论下回复&nbsp;▼&nbsp;</a></span>
             </p>
             
             <div>{{ comment.content|linebreaksbr }}</div>
