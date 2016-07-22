@@ -6,8 +6,9 @@ body {
     color: #000000;
     font-size: 14px;
     font-family: verdana, Courier New;
-    background-image: url('../image/bg.jpg');
-    background-repeat: repeat;
+    background-image: url('../image/3.jpg');
+    background-repeat: no-repeat;
+    background-size:100% 100%;
     padding: 0px;
     margin: 0px;
 }
@@ -48,7 +49,7 @@ div {
 }
 
 div.header{
-    background-color: #066C75;
+//    background-color: #066C75;
 //    background-color: #337AB7;
     color:#ffffff;
     height: 100px;
@@ -165,37 +166,57 @@ div.pagination{
     background-color: #ffffff;
     border-radius: 5px;
 }
-div.pagination a{
+
+
+div.pagination a.active1 {
     display: block;
     font-size: 12px;
     border: 1px solid #DDD;
-    padding: 3px 20px 5px 20px;
+    padding: 3px 15px 5px 15px;
     font-weight: normal;
-    background-color: #2099AB;
+    color: #1985FF;
+    border-radius: 3px;
+    text-decoration: none;
+    display: inline; /* do not show the dot of list */
+}
+
+div.pagination a.active {
+    display: block;
+    font-size: 12px;
+    border: 1px solid #337AB7;
+    padding: 3px 10px 5px 10px;
+    font-weight: normal;
     color: #ffffff;
+    background-color: #337AB7;
     border-radius: 1px;
     text-decoration: none;
     display: inline; /* do not show the dot of list */
 }
 
-
+div.pagination a.deactive {
+    display: block;
+    font-size: 12px;
+    border: 1px solid #DDD;
+    padding: 3px 10px 5px 10px;
+    font-weight: normal;
+    color: #000;
+    border-radius: 1px;
+    text-decoration: none;
+    display: inline; /* do not show the dot of list */
+}
 
 div.pagination span.deactive{
     color: #999999;
     border-radius: 5px;
     font-size: 12px;
     border: 1px solid #DDD;
-    padding: 3px 20px 5px 20px;
+    padding: 3px 15px 5px 15px;
     font-weight: normal;
     background-color: #FFFFFF;
     border-radius: 1px;
     text-decoration: none;
 }
 
-span.currentpage{
-    font-weight: normal;
-    font-size: 12px;
-}
 
 div.article_tags{
     float: left;
