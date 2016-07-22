@@ -1,3 +1,4 @@
+#coding:utf-8
 from django.shortcuts import render
 
 # Create your views here.
@@ -29,15 +30,31 @@ def index(request, tag_slug=""):
     
     # get articles of current page.
     p = Paginator(articles, 10)
-    
-    page = request.GET.get('page')
+    #分页后总的页数
+    pageCount = p.num_pages   
+    #每页显示10个分页器 1-10;  
+    pageDisplay = 10                    
+    page = int(request.GET.get('page',1))
+
     try:
         articles_this_page = p.page(page)
     except PageNotAnInteger:
         articles_this_page = p.page(1)
     except EmptyPage:
         articles_this_page = p.page(p.num_pages)
-    
+   
+    if page <= pageDisplay/2+1:
+        pageStart = 1
+        pageEnd  = pageDisplay+1
+    elif page>pageDisplay/2+1:
+        pageStart = page-pageDisplay/2
+        pageEnd = page+pageDisplay/2
+    if pageEnd > pageCount:
+        pageStart = pageCount-pageDisplay+1
+        pageEnd = pageCount+1
+    if pageEnd <= pageDisplay:
+        pageStart=1
+    page_range=xrange(pageStart,pageEnd) 
     
     # count comments in each article
     for article in articles_this_page:
@@ -48,6 +65,7 @@ def index(request, tag_slug=""):
     
     context  = {'articles': articles_this_page,
                 'tags': tags,
+                'page_range':page_range,
                 'active_tag': active_tag,
                 'recentcmts': Comment.objects.order_by('-datetime'),
                 }
@@ -91,14 +109,31 @@ def archive(request):
     # get articles of current page.
     p = Paginator(articles, 50)
     
-    page = request.GET.get('page')
+    #分页后总的页数
+    pageCount = p.num_pages
+    #每页显示10个分页器 1-10;  
+    pageDisplay = 10
+    page = int(request.GET.get('page',1))
+
     try:
         articles_this_page = p.page(page)
     except PageNotAnInteger:
         articles_this_page = p.page(1)
     except EmptyPage:
         articles_this_page = p.page(p.num_pages)
-    
+
+    if page <= pageDisplay/2+1:
+        pageStart = 1
+        pageEnd  = pageDisplay+1
+    elif page>pageDisplay/2+1:
+        pageStart = page-pageDisplay/2
+        pageEnd = page+pageDisplay/2
+    if pageEnd > pageCount:
+        pageStart = pageCount-pageDisplay+1
+        pageEnd = pageCount+1
+    if pageEnd <= pageDisplay:
+        pageStart=1
+    page_range=xrange(pageStart,pageEnd)
     
     # count comments in each article
     for article in articles_this_page:
@@ -107,6 +142,7 @@ def archive(request):
     
     
     context  = {'articles': articles_this_page,
+                'page_range':page_range,
                 'tags': tags,
                 'recentcmts': Comment.objects.order_by('datetime').reverse()[:5], 
                 }

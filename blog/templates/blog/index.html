@@ -40,15 +40,24 @@
 
     <div class="pagination">
         <span class="step-links">
-            {% if articles.has_previous %}<a href="?page=1">首页</a>{% else %}<span class="deactive">首页</span>{% endif %}
+            {% if articles.has_previous %}<a class="active1" href="?page=1">首页</a>{% else %}<span class="deactive">首页</span>{% endif %}
             
-            {% if articles.has_previous %}<a href="?page={{ articles.previous_page_number }}">上一页</a>{% else %}<span class="deactive">上一页</span>{% endif %}
+            {% if articles.has_previous %}<a class="active1" href="?page={{ articles.previous_page_number }}"><上一页</a>{% else %}<span class="deactive">上一页</span>{% endif %}
     
-            <span class="currentpage">当前页码 {{ articles.number }}/{{ articles.paginator.num_pages }}, 本页共 {{ articles|length }} 篇文章。</span>
+            {% for p in page_range %}
+                    {% ifequal p articles.number %}
+                             <a class="active" href="?page={{ p }}">{{ p }}</a>
+                    {% else %}
+                             <a class="deactive" href="?page={{ p }}">{{ p }}</a>
+                    {% endifequal %}
+            {% endfor %}
+
+<!--            <span class="currentpage">当前页码 {{ articles.number }}/{{ articles.paginator.num_pages }}, 本页共 {{ articles|length }} 篇文章。</span>    -->
            
-            {% if articles.has_next %}<a href="?page={{ articles.next_page_number }}">下一页</a>{% else %}<span class="deactive">下一页</span>{% endif %}
+            {% if articles.has_next %}<a class="active1" href="?page={{ articles.next_page_number }}">下一页></a>{% else %}<span class="deactive">下一页</span>{% endif %}
             
-            {% if articles.has_next %}<a href="?page={{ articles.paginator.num_pages }}">尾页</a>{% else %}<span class="deactive">尾页</span>{% endif %}
+            {% if articles.has_next %}<a class="active1" href="?page={{ articles.paginator.num_pages }}">尾页</a>{% else %}<span class="deactive">尾页</span>{% endif %}
+             <span style="float:right;font-size:10px;">共{{ articles.paginator.num_pages }}页</span>
         </span>
     </div>
 
