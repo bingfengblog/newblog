@@ -79,8 +79,11 @@ p.moto{
 }
 
 div.nav{
-    background: url('../image/x.png') 0 0;
+//    background: url('../image/x.png') 0 0;
     height: 53px;
+    width: 1080px;
+    margin:0 auto;
+    border-bottom:1px solid #ddd;
 }
 
 ul.menu{
@@ -91,22 +94,27 @@ ul.menu{
 .menu li{
     float: left;
     display: inline; /* do not show the dot of list */
+    
 }
 
 .menu li a{
     float: left;
     text-decoration: none;
-    padding:0 12px;
+    padding:0 10px;
     font-size: 16px;
     font-weight: bold;
     color: #111111;
-    width: 70px;
-    line-height:50px;
+    width: 60px;
+    line-height:52px;
     text-align: center;
 }
 .menu li a.active{
-    background-color: #2099AB;
-    color: #ffffff;
+    color: #fff;
+    border:1px solid;
+    border-color:#ddd #ddd #72817C #ddd;
+    padding:0 12px;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
 }
 
 .menu li a:hover{
@@ -115,7 +123,7 @@ ul.menu{
 
 div.wrap{
     max-width: 1080px;
-    margin: 0px auto 0px auto;
+    margin: 15px auto 0px auto;
     height: 100%;
 }
 
@@ -129,7 +137,7 @@ div.article{
     width: 810px;
     padding: 0px 0px 0px 0px;
     margin: 20px 0px 20px 0px;
-    background-color: #ffffff;
+    background-color: #EDF1F2;
     color:#393939;
     height: 100%;
     border-radius: 5px;
@@ -141,7 +149,7 @@ div.article2{
     width: 810px;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 20px 0px;
-    background-color: #ffffff;
+    background-color: #fff;
     color:#393939;
     height: 100%;
     border-radius: 5px;
@@ -150,7 +158,8 @@ div.article2{
 div.article_header{
     border-bottom: 1px solid #E1E1E1;
     font-weight: bold;
-    background: url('../image/x.png') 0 0;
+//    background: #EDF1F2 url('../image/x.png') 0 0;
+    background:#E9E9E9;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height: 48px;
@@ -683,9 +692,9 @@ div.footer{
     margin: 20px 0px 0px 0px;
     padding: 20px;
     font-size: 13px;
+//    border-top: 1px solid #5FB3CB;
     text-align: center;
     clear: both;
-    background-color: #FFFFFF;
     color: #999999;
     height: 55px;
     font-weight: bold;
