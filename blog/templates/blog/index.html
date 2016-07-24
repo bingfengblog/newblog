@@ -13,9 +13,9 @@
 <div class="content">
 {% if articles %}
     {% for article in articles %}
-    <div class="article">
-    
-    <div class="article_header"><a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
+        
+    <div class="article_border">   
+      <div class="article_header"><a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
     
     <div class="article_tags">
         {% for tag in article.tags.all %}
@@ -33,8 +33,8 @@
     {% endifnotequal %}
     <a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}#bottom">评论({{ article.cmts }})</a>
     </div>
-    </div>
     
+  </div>
     {% endfor %}
 {% endif %}
 

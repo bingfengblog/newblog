@@ -143,16 +143,21 @@ div.article{
     border-radius: 5px;
 }
 
-div.article_out:hover {
+div.article_border {
     width: 810px;
     padding: 0px 0px 0px 0px;
-//    margin: 19px 0px 19px 0px;
+    margin: 20px 0px 20px 0px;
     background-color: #EDF1F2;
-    border: 1px solid #ddd;
-    color:  #393939;
+    color:#393939;
     height: 100%;
+    border:2px solid #ddd;
     border-radius: 5px;
+}
 
+div.article_border:hover {
+    width:810px;
+    border: 2px solid #1E764A;
+    border-radius:5px;
 }
 
 div.article2{
@@ -161,7 +166,7 @@ div.article2{
     width: 810px;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 20px 0px;
-    background-color: #fff;
+    background-color: #edf1f2;
     color:#393939;
     height: 100%;
     border-radius: 5px;
@@ -170,12 +175,12 @@ div.article2{
 div.article_header{
     border-bottom: 1px solid #E1E1E1;
     font-weight: bold;
-//    background: #EDF1F2 url('../image/x.png') 0 0;
+    background: #EDF1F2 url('../image/x.png') 0 0;
     background:#E9E9E9;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    height: 48px;
-    padding: 0px 20px 0px 15px;
+    height: 45px;
+   padding: 0px 20px 0px 15px;
     margin: 0px 0px 0px 0px;
 }
 
@@ -267,7 +272,7 @@ div.article_content{
     margin: 10px 0px 10px 0px;
     font-size: 14px;
     line-height: 27px;
-//    min-height:600px;
+//    min-height:500px;
 }
 
 
@@ -369,10 +374,10 @@ div.article_content pre code{
 
 div.sidebar{
     float: right;
-    width: 220px;
+    width: 216px;
     padding: 0px 10px 10px 10px;
     margin: 20px 0px 10px 0px;
-    background-color: #ffffff;
+    background-color: #edf1f2;
     border-radius: 5px;
     color:#066C75;
     height: 100%;
@@ -441,7 +446,7 @@ div.recentcmt a:hover{
     font-weight: normal;
     overflow: hidden;
     background-color: #F9F9F9;
-    border-radius: 2px;
+    border-radius: 5px;
     text-decoration: none;
     display: inline-block; /* do not show the dot of list */
 }
@@ -504,14 +509,14 @@ div.article_comment{
     font-size: 24px;
     color: #DB7C00;
     display: block;
-    padding: 12px 5px 3px 5px;
-    margin: 20px 0px 0px 0px;
+    padding: 10px 5px 3px 5px;
+//    margin: 20px 0px 0px 0px;
     font-weight: bolder;
     overflow: hidden;
     text-decoration: none;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    height: 28px;
+    height: 35px;
 }
 .article_header a:hover{
     color: #FF9C00;
@@ -584,6 +589,7 @@ div.submit_comment{
 }
 div.submit_comment input{
     height: 20px;
+    
     size: 200px; 
 }
 
@@ -685,7 +691,7 @@ div.submit_comment label{
 div.submit_comment input, textarea{
     width: 240px;
     color: #505050;
-    border:1px solid #EEEEEE;
+    border:1px solid #ddd;
     border-radius: 3px;
     font-size: 14px;
 }
