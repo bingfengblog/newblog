@@ -412,8 +412,24 @@ div.ds-top-threads {
    padding-top: 0px;
    min-height: 100px;
 }
+div.ds-top-threads li {
+    display:block;
+}
 div.ds-top-threads a {
-   color:#838383;
+    color: #999;
+    display: block;
+    padding: 5px 0px 5px 5px;
+    font-weight: normal;
+    height:100%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+div.ds-top-threads a:hover {
+   background-color:#E9E9E9;
+   padding: 5px 0px 5px 2px;
+   color:#4FA7FF;
+   border-left:3px solid #EA4270;
 }
 
 div.recentcmt a:hover{
