@@ -105,9 +105,9 @@
     <h3 class="comment">发表评论</h3>
     
 <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="{{ article.id }}" data-title="{{ article.title }}"></div>
+    <div class="ds-thread" data-thread-key="{{ article.id }}" data-title="{{ article.title }}" data-url="http://192.168.9.224{% url 'article' article.id %}"></div>
 <!-- 多说评论框 end -->
-<div class="ds-share" data-thread-key="{{ article.id }}" data-title="{{ article.title }}" data-images="" data-content="{{ article.content }}">
+<div class="ds-share" data-thread-key="{{ article.id }}" data-title="{{ article.title }}" data-images="" data-content="{{ article.content }}" data-url="http://192.168.9.224{% url 'article' article.id %}">
     <div class="ds-share-inline">
       <ul  class="ds-share-icons-16">
 
