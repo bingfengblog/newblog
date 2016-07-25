@@ -53,9 +53,10 @@
 <div class="wrap">
     {% block content %}{% endblock %}
     
-    <a href="#" onclick="GoTop();return false;"><img style="position: fixed; bottom:160px; border: none;" alt="top" src="{% static 'blog/image/up.gif' %}"></img></a>
+    <a href="#top"><img style="position: fixed; bottom:160px; border: none;" alt="top" src="{% static 'blog/image/up.gif' %}"></img></a>
     <a href="#bottom" onclick="GoBottom();return false;"><img style="position: fixed; bottom:120px;border: none;" alt="bottom" src="{% static 'blog/image/down.gif' %}"></img></a>
     <div class="sidebar">
+        <div class="tagbar">
         {% if tags %}
         <h3>文章分类</h3>
             {% for tag in tags %}
@@ -63,15 +64,16 @@
             {% endfor %}
         {% endif %}
         <br />
+        </div>
+        <div class="hot"> 
+        <h3>热门文章</h3>
+        <div class="ds-top-threads" data-range="weekly" data-num-items="5"></div>
+        </div>
         <h3>最新评论</h3>
-            {% for cmt in recentcmts %}
+
             <div class="recentcmt">
-            <p>{{ cmt.content }} <span style="color: #DDDDDD; display: inline-block;">{{ cmt.datetime|date:"Y-m-d H:i" }}</span></p>
-            <p><span style="font-weight: bold;color:#2196F3;">{% if cmt.website != '' %}<a href="{{ cmt.website }}" style="text-decoration: underline;font-weight: bold;color:#2196F3;">{{ cmt.user }}</a>{% else %}{{ cmt.user }}{% endif %}</span> 评论了
-            <a style="color:#156741" href="/blog/{{ cmt.to_article.id }}">{{ cmt.to_article.title }}</a></p>
-            
+            <div class="ds-recent-comments" data-num-items="5" data-show-avatars="1" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
             </div>
-            {% endfor %}
         <br />
     </div>
     
@@ -87,9 +89,19 @@
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8b10321ea18c9ff988a1fc1012778162' type='text/javascript'%3E%3C/script%3E"));
-</script>
-</div>
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+var duoshuoQuery = {short_name:"pytest"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+<!-- 多说公共JS代码 end -->
 
+</script>
 
 
 </body>

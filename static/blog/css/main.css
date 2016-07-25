@@ -134,13 +134,13 @@ div.content{
 }
 
 div.article{
-    width: 810px;
+    width: 814px;
     padding: 0px 0px 0px 0px;
     margin: 20px 0px 20px 0px;
     background-color: #EDF1F2;
     color:#393939;
     height: 100%;
-    border-radius: 5px;
+ border-radius: 5px;
 }
 
 div.article_border {
@@ -163,7 +163,7 @@ div.article_border:hover {
 div.article2{
     clear: both;
     float: left;
-    width: 810px;
+    width: 814px;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 20px 0px;
     background-color: #edf1f2;
@@ -185,7 +185,7 @@ div.article_header{
 }
 
 div.pagination{
-    width: 790px;
+    width: 794px;
     padding: 10px 10px 10px 10px;
     margin: 20px 0px 30px 0px;
     text-align: center;
@@ -388,7 +388,8 @@ div.recentcmt{
     padding: 5px 0px 5px 0px;
     border-bottom: 1px solid #DDDDDD;
     font-size: 14px;
-    line-height: 22px;
+//    line-height: 22px;
+    min-height:100px;
 }
 
 div.recentcmt p{
@@ -401,17 +402,23 @@ div.recentcmt a{
     font-size: 13px;
     color: #393939;
     display: inline;
-    background-color: #FFFFFF;
     border: none;
     padding: 0px;
     text-decoration: none;
+}
+div.ds-top-threads {
+   color:#000;
+   font-size:  15px;
+   padding-top: 0px;
+   min-height: 100px;
+}
+div.ds-top-threads a {
+   color:#838383;
 }
 
 div.recentcmt a:hover{
     font-weight: bold;
     display: inline;
-    color: #393939;
-    background-color: #FFFFFF;
     text-decoration: underline;
 }
 
@@ -425,7 +432,7 @@ div.recentcmt a:hover{
     border-bottom: 2px #ddd solid;
 }
 
-.sidebar  a {
+.tagbar  a {
     color: #999;
     display: block;
     border: 1px solid #DDD;
@@ -437,6 +444,7 @@ div.recentcmt a:hover{
     border-radius: 3px;
     text-decoration: none;
 }
+
 .article_tags  a {
     color: #999;
     display: block;
@@ -483,11 +491,11 @@ div.article_comment{
     font-weight: 400;
     overflow: hidden;
     background-color: #F9F9F9;
-    border-radius: 2px;
+    border-radius: 5px;
     text-decoration: none;
     display: inline; /* do not show the dot of list */
 }
-.article_comment a:hover, .sidebar a:hover{
+.article_comment a:hover, .tagbar a:hover{
     color: #ffffff;
     background-color: #2099AB;
 }
@@ -495,12 +503,12 @@ div.article_comment{
 .article_comment a.readmore {
     display: block;
     font-size: 12px;
-    border: 1px solid #DDD;
-    padding: 5px 20px 7px 20px;
+    border: 1px;
+    padding: 5px 10px 7px 10px;
     font-weight: normal;
     background-color: #2099AB;
     color: #ffffff;
-    border-radius: 2px;
+    border-radius: 5px;
     text-decoration: none;
     display: inline; /* do not show the dot of list */
 }

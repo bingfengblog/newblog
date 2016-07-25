@@ -21,7 +21,7 @@
         {{ article.datetime|date:"Y-m-d" }} &nbsp;
         <a title="{% for tag in article.tags.all %}{{ tag.title }} {% endfor %}" href="/blog/{{ article.id }}" style="font-weight: normal; display: inline-table; width: 580px; vertical-align: top;">{{ article.title }}</a>
         
-        &nbsp;评论({{ article.cmts }})
+        &nbsp;评论(<span class="ds-thread-count" data-thread-key="{{ article.id }}"></span>)
         <!-- 
         <div style="float: right">标签：
         {% for tag in article.tags.all %}

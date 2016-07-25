@@ -13,8 +13,7 @@
 <div class="content">
 {% if articles %}
     {% for article in articles %}
-        
-    <div class="article_border">   
+      <div class="article_border">  
       <div class="article_header"><a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
     
     <div class="article_tags">
@@ -31,10 +30,9 @@
     {% ifnotequal article.content|truncatewords_html:30|length article.content|truncatewords_html:31|length %}
     <a id="link_{{ article.id }}" class="readmore" href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}" onclick="loadall({{ article.id }}); return false;">▼&nbsp;&nbsp;展开全文...</a>
     {% endifnotequal %}
-    <a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}#bottom">评论({{ article.cmts }})</a>
+    <a href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}#bottom">评论(<span class="ds-thread-count" data-thread-key="{{ article.id }}"></span>)</a>
     </div>
-    
-  </div>
+    </div>
     {% endfor %}
 {% endif %}
 
@@ -52,8 +50,6 @@
                     {% endifequal %}
             {% endfor %}
 
-<!--            <span class="currentpage">当前页码 {{ articles.number }}/{{ articles.paginator.num_pages }}, 本页共 {{ articles|length }} 篇文章。</span>    -->
-           
             {% if articles.has_next %}<a class="active1" href="?page={{ articles.next_page_number }}">下一页></a>{% else %}<span class="deactive">下一页</span>{% endif %}
             
             {% if articles.has_next %}<a class="active1" href="?page={{ articles.paginator.num_pages }}">尾页</a>{% else %}<span class="deactive">尾页</span>{% endif %}

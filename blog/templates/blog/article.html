@@ -1,7 +1,6 @@
 {% extends "blog/base.html" %}
 {% load staticfiles %}
 {% load djangomarkdown %}
-
 {% block title %}{{ article.title|safe }} | 冰峰世界{% endblock %}
 
 {% block navigator %}
@@ -13,26 +12,25 @@
 
 {% block content %}
 <div class="content">
-    <div class="article">
+        <div class="article">
+        <div class="article_header"><a title="{{ article.title }}"  href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
     
-    <div class="article_header"><a title="{{ article.title }}"  href="/blog/{% if active_tag %}tag-{{ active_tag.slug }}/{% endif %}{{ article.id }}">{{ article.title|truncatechars:50 }}</a></div>
     
+        <div class="article_tags">
+         {% for tag in article.tags.all %}
+         <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %} ><span>&bull;</span>{{ tag.title }}</a>
+         {% endfor %}
+        </div>
     
-    <div class="article_tags">
-        {% for tag in article.tags.all %}
-        <a href="/blog/tag-{{ tag.slug }}" {% if tag == active_tag %} class="active" {% endif %} ><span>&bull;</span>{{ tag.title }}</a>
-        {% endfor %}
-    </div>
+         <div class="article_datetime"><span>&bull;</span>{{ article.datetime|date:"Y-m-d H:i" }}</div>
+         <div class="article_content">{{ article.content|djangomarkdown }}
     
-    <div class="article_datetime"><span>&bull;</span>{{ article.datetime|date:"Y-m-d H:i" }}</div>
-    <div class="article_content">{{ article.content|djangomarkdown }}
+        <br />
+        <p style="color: #DEDEDE; float: right;">Permalink [<a style="color: #DEDEDE" href="/blog/{{ article.id }}">http://192.168.9.224:82/blog/{{ article.id }}</a>]</p>
     
-    <br />
-    <p style="color: #DEDEDE; float: right;">Permalink [<a style="color: #DEDEDE" href="/{{ article.id }}">http://192.168.9.224:82/{{ article.id }}</a>]</p>
-    
-    <br />
-    </div>
-    </div>
+        <br />
+   </div>
+</div>
     
     
     
@@ -60,7 +58,6 @@
                 
                 
                 
-                <span class="datetime">{{ comment.datetime|date:"Y-m-d H:i" }}&nbsp;&nbsp;<a style="color:#29B5FF;"href="#reply_to_user" onclick="replyto('{{ comment.id }}', '{{ comment.user }}')" class="reply">在此条评论下回复&nbsp;▼&nbsp;</a></span>
             </p>
             
             <div>{{ comment.content|linebreaksbr }}</div>
@@ -106,7 +103,24 @@
     <div class="article2">
     <div class="submit_comment">
     <h3 class="comment">发表评论</h3>
-    <form action="{% url 'submit-comment' article.id %}" method="post">
+    
+<!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="{{ article.id }}" data-title="{{ article.title }}"></div>
+<!-- 多说评论框 end -->
+<div class="ds-share" data-thread-key="{{ article.id }}" data-title="{{ article.title }}" data-images="" data-content="{{ article.content }}">
+    <div class="ds-share-inline">
+      <ul  class="ds-share-icons-16">
+
+        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+        <li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+        <li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+        <li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+        <li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+
+      </ul>
+    </div>
+ </div>
+<!--    <form action="{% url 'submit-comment' article.id %}" method="post">
         {% csrf_token %}
         <p id="reply_to_user"></p>
         
@@ -143,10 +157,9 @@
         </p>
         
         <input type="hidden" name="to_comment_id" id="reply_to_comment" value="" />
-    </form>
+    </form>  -->
     </div>
     </div>
-
 
 
     {% if comments.paginator.num_pages > 1 %}
