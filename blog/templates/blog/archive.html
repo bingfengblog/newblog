@@ -14,24 +14,18 @@
     <div class="article_header"><a href="/blog/archive">全部文章</a></div>
     <div class="article_content" style="min-height:500px;">
     {% if articles %}
+        
+        <div class="archive_article">     
         {% for article in articles %}
-        
-        <p style="font-size: 14px; line-height: 16px; text-indent: 0px; margin: 10px 0px 5px 0px; padding: 0px 0px 2px 0px; ">
-        
-        {{ article.datetime|date:"Y-m-d" }} &nbsp;
-        <a title="{% for tag in article.tags.all %}{{ tag.title }} {% endfor %}" href="/blog/{{ article.id }}" style="font-weight: normal; display: inline-table; width: 580px; vertical-align: top;">{{ article.title }}</a>
+         <p class="archive_title">            
+        <span>{{ article.datetime|date:"Y-m-d" }}</span>
+        <a title="{% for tag in article.tags.all %}{{ tag.title }} {% endfor %}" href="/blog/{{ article.id }}">{{ article.title }}</a>
         
         &nbsp;评论(<span class="ds-thread-count" data-thread-key="{{ article.id }}"></span>)
-        <!-- 
-        <div style="float: right">标签：
-        {% for tag in article.tags.all %}
-        <a href="/blog/tag-{{ tag.slug }}">{{ tag.title }}</a>
-        {% endfor %}
-        </div> -->
         
         {% endfor %}
-        
         </p>
+        </div>
     {% endif %}
     </div>
 </div>

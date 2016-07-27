@@ -2,10 +2,10 @@
 <html lang="en">
 {% load staticfiles %}
 <head>
+    <meta content="telephone=no" name="format-detection" />
     <meta charset="UTF-8" />
-    <meta name="baidu-site-verification" content="EsdTr3rGZ5" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <title>{% block title %}首页 | 冰峰世界{% endblock %}</title>
-    
     <link rel="stylesheet" href="{% static 'blog/css/main.css' %}" />
     <script src="{% static 'blog/js/jquery-2.1.0.min.js' %}" type="text/javascript" ></script>
     <script src="{% static 'blog/js/main.js' %}" type="text/javascript" ></script>
@@ -52,10 +52,11 @@
 
 <div class="wrap">
     {% block content %}{% endblock %}
-    
+    <div class="top-bottom"> 
     <a href="#top"><img style="position: fixed; bottom:160px; border: none;" alt="top" src="{% static 'blog/image/up.gif' %}"></img></a>
     <a href="#bottom" onclick="GoBottom();return false;"><img style="position: fixed; bottom:120px;border: none;" alt="bottom" src="{% static 'blog/image/down.gif' %}"></img></a>
-    <div class="sidebar">
+    </div> 
+   <div class="sidebar">
         <div class="tagbar">
         {% if tags %}
         <h3>文章分类</h3>

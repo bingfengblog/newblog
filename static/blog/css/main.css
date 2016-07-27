@@ -1,6 +1,4 @@
 
-
-
 body {
     width: 100%;
     color: #000000;
@@ -175,7 +173,6 @@ div.article2{
 div.article_header{
     border-bottom: 1px solid #E1E1E1;
     font-weight: bold;
-    background: #EDF1F2 url('../image/x.png') 0 0;
     background:#E9E9E9;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -261,7 +258,6 @@ div.article_datetime{
     height: 10px;
     color: #999;
     background-color: #FAFAFA;
-    background-color: #FFFFFF;
     border-radius: 3px;
     border: 1px #E9E9E9 solid;
 }
@@ -272,7 +268,6 @@ div.article_content{
     margin: 10px 0px 10px 0px;
     font-size: 14px;
     line-height: 27px;
-//    min-height:500px;
 }
 
 
@@ -617,13 +612,6 @@ div.submit_comment input{
     size: 200px; 
 }
 
-div.space {
-    height: 100px;
-    margin: 0px;
-    padding: 0px;
-    
-    background-image: url('../image/bg.jpg');
-}
 
 div.article_comments{
     clear: both;
@@ -747,8 +735,45 @@ div.footer p{
     margin: 5px;
     padding: 5px;
 }
+div.article_content a {
+   font-weight: normal; 
+   font-size:18px;
+   display: inline-table; 
+   width: 580px; 
+   vertical-align: top;
+}
+div.article_content p.archive_title {
+    font-size: 14px; 
+    line-height: 20px; 
+    text-indent: 0px;
+     margin: 10px 0px 5px 0px; 
+    padding: 0px 0px 2px 0px; 
+}
 
-
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+     
+     body  { overflow-x:hidden;}
+     div.sidebar { display:none;}
+     div.top-bottom {display:none;}
+     div.nav { width:98%;}
+     div.pagination {width:96%;font-size:0.5rem;padding:6px;}
+     div.article,div.article2{width:98%;margin:2px;auto;font-size:0.5em;}
+     div.content  {width: 98%;padding-left:4px;}
+     div.article_header a {font-size:1rem}
+     div.article_header {padding:0px 5px 0px 5px;}
+     div.article_tags {padding:5px 5px 5px 5px;}
+     div.article_datetime {padding:5px 5px 5px 5px;margin:5px;font-size:0.5rem;}
+     div.article_comment,div.comment {width:97%;font-size:0.5rem;}
+     div.article_border,div.article_border:hover {width:98%;}
+     div.article_content {padding:0px 10px 15px 10px;}
+     div.article_content a { width:98%;font-size:0.9rem;}
+    div.archive_article a { float:left;display:inline-table;color:#FF8224;font-weight:bolder;width:100%;}
+     div.archive_article p { line-height:25px;}
+     div.pagination a.active,div.pagination a.deactive,div.pagination a.active1,div.pagination span.deactive { padding:2px;}
+     
+     
+ 
+}
 
 
 
