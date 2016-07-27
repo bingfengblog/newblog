@@ -4,7 +4,7 @@ body {
     color: #000000;
     font-size: 14px;
     font-family: verdana, Courier New;
-    background-image: url('../image/3.jpg');
+    background-image: url('../image/2.jpg');
     background-repeat: no-repeat;
     background-size:100% 100%;
     padding: 0px;
@@ -109,7 +109,7 @@ ul.menu{
 .menu li a.active{
     color: #fff;
     border:1px solid;
-    border-color:#ddd #ddd #72817C #ddd;
+    border-color:#ddd #ddd #4BA3BB #ddd;
     padding:0 12px;
     border-top-left-radius:8px;
     border-top-right-radius:8px;
@@ -154,7 +154,7 @@ div.article_border {
 
 div.article_border:hover {
     width:810px;
-    border: 2px solid #1E764A;
+    border: 2px solid #40B7F3;
     border-radius:5px;
 }
 
@@ -758,7 +758,7 @@ div.article_content p.archive_title {
      div.nav { width:98%;}
      div.pagination {width:96%;font-size:0.5rem;padding:6px;}
      div.article,div.article2{width:98%;margin:2px;auto;font-size:0.5em;}
-     div.content  {width: 98%;padding-left:4px;}
+     div.content  {width: 98%;padding-left:1.5%;}
      div.article_header a {font-size:1rem}
      div.article_header {padding:0px 5px 0px 5px;}
      div.article_tags {padding:5px 5px 5px 5px;}
@@ -767,7 +767,7 @@ div.article_content p.archive_title {
      div.article_border,div.article_border:hover {width:98%;}
      div.article_content {padding:0px 10px 15px 10px;}
      div.article_content a { width:98%;font-size:0.9rem;}
-    div.archive_article a { float:left;display:inline-table;color:#FF8224;font-weight:bolder;width:100%;}
+     div.archive_article a { float:left;display:inline-table;color:#FF8224;font-weight:bolder;width:100%;}
      div.archive_article p { line-height:25px;}
      div.pagination a.active,div.pagination a.deactive,div.pagination a.active1,div.pagination span.deactive { padding:2px;}
      

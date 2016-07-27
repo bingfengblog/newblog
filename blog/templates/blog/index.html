@@ -3,11 +3,6 @@
 
 {% block title %}{% if active_tag %}标签: {{ active_tag.title }}{% else %}首页{% endif %} | 冰峰世界{% endblock %}
 
-{% block navigator %}
-    <li><a href="/" class="active">首页</a></li>
-    <li><a href="/blog/archive">存档</a></li>
-    <li><a href="/blog/1/">关于</a></li>
-{% endblock %}
 
 {% block content %}
 <div class="content">
