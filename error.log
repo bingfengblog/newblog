@@ -127,3 +127,810 @@ Not Found: /blog/1/
 Not Found: /blog/1/
 Not Found: /blog/1/
 Not Found: /blog/1/
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 02:18:11.892693) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 02:18:24.061384) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 02:18:33.796264) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 02:18:41.934502) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 02:18:55.326259) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/bbx_it/lib/python2.7/site-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField Comment.datetime received a naive datetime (2016-07-22 05:51:51.167501) while time zone support is active.
+  RuntimeWarning)
+
+[2016-07-22 09:35:22 +0000] [9134] [INFO] Handling signal: int
+[2016-07-22 21:35:23 +0000] [9145] [INFO] Worker exiting (pid: 9145)
+[2016-07-22 21:35:23 +0000] [9144] [INFO] Worker exiting (pid: 9144)
+[2016-07-22 09:35:23 +0000] [9134] [INFO] Shutting down: Master
+[2016-07-22 09:35:51 +0000] [13234] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 09:35:51 +0000] [13234] [INFO] Listening at: http://127.0.0.1:8001 (13234)
+[2016-07-22 09:35:51 +0000] [13234] [INFO] Using worker: sync
+[2016-07-22 09:35:51 +0000] [13239] [INFO] Booting worker with pid: 13239
+[2016-07-22 09:35:51 +0000] [13240] [INFO] Booting worker with pid: 13240
+[2016-07-22 09:45:38 +0000] [13234] [INFO] Handling signal: int
+[2016-07-22 21:45:38 +0000] [13240] [INFO] Worker exiting (pid: 13240)
+[2016-07-22 21:45:38 +0000] [13239] [INFO] Worker exiting (pid: 13239)
+[2016-07-22 09:45:38 +0000] [13234] [INFO] Shutting down: Master
+[2016-07-22 09:45:41 +0000] [14728] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 09:45:41 +0000] [14728] [INFO] Listening at: http://127.0.0.1:8001 (14728)
+[2016-07-22 09:45:41 +0000] [14728] [INFO] Using worker: sync
+[2016-07-22 09:45:41 +0000] [14733] [INFO] Booting worker with pid: 14733
+[2016-07-22 09:45:41 +0000] [14736] [INFO] Booting worker with pid: 14736
+[2016-07-22 10:24:34 +0000] [14728] [INFO] Handling signal: int
+[2016-07-22 22:24:34 +0000] [14736] [INFO] Worker exiting (pid: 14736)
+[2016-07-22 22:24:34 +0000] [14733] [INFO] Worker exiting (pid: 14733)
+[2016-07-22 10:24:34 +0000] [14728] [INFO] Shutting down: Master
+[2016-07-22 10:24:42 +0000] [20359] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 10:24:42 +0000] [20359] [INFO] Listening at: http://127.0.0.1:8001 (20359)
+[2016-07-22 10:24:42 +0000] [20359] [INFO] Using worker: sync
+[2016-07-22 10:24:42 +0000] [20364] [INFO] Booting worker with pid: 20364
+[2016-07-22 10:24:42 +0000] [20365] [INFO] Booting worker with pid: 20365
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 123, in get_response
+    response = middleware_method(request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/middleware/common.py", line 61, in process_request
+    if self.should_redirect_with_slash(request):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/middleware/common.py", line 79, in should_redirect_with_slash
+    not urlresolvers.is_valid_path(request.path_info, urlconf)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 668, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 534, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+[2016-07-22 10:28:27 +0000] [20359] [INFO] Handling signal: int
+[2016-07-22 22:28:27 +0000] [20364] [INFO] Worker exiting (pid: 20364)
+[2016-07-22 22:28:27 +0000] [20365] [INFO] Worker exiting (pid: 20365)
+[2016-07-22 10:28:27 +0000] [20359] [INFO] Shutting down: Master
+[2016-07-22 10:28:28 +0000] [20910] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 10:28:28 +0000] [20910] [INFO] Listening at: http://127.0.0.1:8001 (20910)
+[2016-07-22 10:28:28 +0000] [20910] [INFO] Using worker: sync
+[2016-07-22 10:28:28 +0000] [20918] [INFO] Booting worker with pid: 20918
+[2016-07-22 10:28:28 +0000] [20919] [INFO] Booting worker with pid: 20919
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 374, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/sleepycat/urls.py", line 17, in <module>
+    url(r'^',           include('blog.urls')),
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 52, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/python/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/local/nginx/sleepycat/blog/urls.py", line 3, in <module>
+    from blog import views
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 32
+SyntaxError: Non-ASCII character '\xe5' in file /usr/local/nginx/sleepycat/blog/views.py on line 32, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 37, in index
+    page = int(request.GET.get('page'))
+TypeError: int() argument must be a string or a number, not 'NoneType'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 37, in index
+    page = int(request.GET.get('page'))
+TypeError: int() argument must be a string or a number, not 'NoneType'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 37, in index
+    page = int(request.GET.get('page',1))
+TypeError: int() argument must be a string or a number, not 'NoneType'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 37, in index
+    page = int(request.GET.get('page',1))
+TypeError: int() argument must be a string or a number, not 'NoneType'
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 37, in index
+    page = int(request.GET.get('page',1))
+TypeError: int() argument must be a string or a number, not 'NoneType'
+[2016-07-22 10:30:33 +0000] [20910] [INFO] Handling signal: int
+[2016-07-22 22:30:33 +0000] [20918] [INFO] Worker exiting (pid: 20918)
+[2016-07-22 22:30:33 +0000] [20919] [INFO] Worker exiting (pid: 20919)
+[2016-07-22 10:30:33 +0000] [20910] [INFO] Shutting down: Master
+[2016-07-22 10:30:36 +0000] [21246] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 10:30:36 +0000] [21246] [INFO] Listening at: http://127.0.0.1:8001 (21246)
+[2016-07-22 10:30:36 +0000] [21246] [INFO] Using worker: sync
+[2016-07-22 10:30:36 +0000] [21251] [INFO] Booting worker with pid: 21251
+[2016-07-22 10:30:36 +0000] [21254] [INFO] Booting worker with pid: 21254
+[2016-07-22 11:18:04 +0000] [21246] [INFO] Handling signal: int
+[2016-07-22 23:18:04 +0000] [21251] [INFO] Worker exiting (pid: 21251)
+[2016-07-22 23:18:04 +0000] [21254] [INFO] Worker exiting (pid: 21254)
+[2016-07-22 11:18:05 +0000] [21246] [INFO] Shutting down: Master
+[2016-07-22 11:18:07 +0000] [28273] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:18:07 +0000] [28273] [INFO] Listening at: http://127.0.0.1:8001 (28273)
+[2016-07-22 11:18:07 +0000] [28273] [INFO] Using worker: sync
+[2016-07-22 11:18:07 +0000] [28278] [INFO] Booting worker with pid: 28278
+[2016-07-22 11:18:07 +0000] [28281] [INFO] Booting worker with pid: 28281
+[2016-07-22 11:25:08 +0000] [28273] [INFO] Handling signal: int
+[2016-07-22 23:25:08 +0000] [28281] [INFO] Worker exiting (pid: 28281)
+[2016-07-22 23:25:08 +0000] [28278] [INFO] Worker exiting (pid: 28278)
+[2016-07-22 11:25:08 +0000] [28273] [INFO] Shutting down: Master
+[2016-07-22 11:25:10 +0000] [29438] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:25:10 +0000] [29438] [INFO] Listening at: http://127.0.0.1:8001 (29438)
+[2016-07-22 11:25:10 +0000] [29438] [INFO] Using worker: sync
+[2016-07-22 11:25:10 +0000] [29443] [INFO] Booting worker with pid: 29443
+[2016-07-22 11:25:10 +0000] [29446] [INFO] Booting worker with pid: 29446
+[2016-07-22 11:26:54 +0000] [29438] [INFO] Handling signal: int
+[2016-07-22 23:26:54 +0000] [29443] [INFO] Worker exiting (pid: 29443)
+[2016-07-22 23:26:54 +0000] [29446] [INFO] Worker exiting (pid: 29446)
+[2016-07-22 11:26:54 +0000] [29438] [INFO] Shutting down: Master
+[2016-07-22 11:26:56 +0000] [29713] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:26:56 +0000] [29713] [INFO] Listening at: http://127.0.0.1:8001 (29713)
+[2016-07-22 11:26:56 +0000] [29713] [INFO] Using worker: sync
+[2016-07-22 11:26:56 +0000] [29718] [INFO] Booting worker with pid: 29718
+[2016-07-22 11:26:56 +0000] [29721] [INFO] Booting worker with pid: 29721
+[2016-07-22 11:27:56 +0000] [29713] [INFO] Handling signal: int
+[2016-07-22 23:27:56 +0000] [29721] [INFO] Worker exiting (pid: 29721)
+[2016-07-22 23:27:56 +0000] [29718] [INFO] Worker exiting (pid: 29718)
+[2016-07-22 11:27:57 +0000] [29713] [INFO] Shutting down: Master
+[2016-07-22 11:27:59 +0000] [29897] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:27:59 +0000] [29897] [INFO] Listening at: http://127.0.0.1:8001 (29897)
+[2016-07-22 11:27:59 +0000] [29897] [INFO] Using worker: sync
+[2016-07-22 11:27:59 +0000] [29902] [INFO] Booting worker with pid: 29902
+[2016-07-22 11:27:59 +0000] [29903] [INFO] Booting worker with pid: 29903
+[2016-07-22 11:28:47 +0000] [29897] [INFO] Handling signal: int
+[2016-07-22 23:28:47 +0000] [29902] [INFO] Worker exiting (pid: 29902)
+[2016-07-22 23:28:47 +0000] [29903] [INFO] Worker exiting (pid: 29903)
+[2016-07-22 11:28:47 +0000] [29897] [INFO] Shutting down: Master
+[2016-07-22 11:28:49 +0000] [30064] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:28:49 +0000] [30064] [INFO] Listening at: http://127.0.0.1:8001 (30064)
+[2016-07-22 11:28:49 +0000] [30064] [INFO] Using worker: sync
+[2016-07-22 11:28:49 +0000] [30069] [INFO] Booting worker with pid: 30069
+[2016-07-22 11:28:49 +0000] [30070] [INFO] Booting worker with pid: 30070
+[2016-07-22 11:30:53 +0000] [30064] [INFO] Handling signal: int
+[2016-07-22 23:30:53 +0000] [30069] [INFO] Worker exiting (pid: 30069)
+[2016-07-22 23:30:53 +0000] [30070] [INFO] Worker exiting (pid: 30070)
+[2016-07-22 11:30:53 +0000] [30064] [INFO] Shutting down: Master
+[2016-07-22 11:30:56 +0000] [30427] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:30:56 +0000] [30427] [INFO] Listening at: http://127.0.0.1:8001 (30427)
+[2016-07-22 11:30:56 +0000] [30427] [INFO] Using worker: sync
+[2016-07-22 11:30:56 +0000] [30432] [INFO] Booting worker with pid: 30432
+[2016-07-22 11:30:56 +0000] [30435] [INFO] Booting worker with pid: 30435
+[2016-07-22 11:35:23 +0000] [30427] [INFO] Handling signal: int
+[2016-07-22 23:35:23 +0000] [30432] [INFO] Worker exiting (pid: 30432)
+[2016-07-22 23:35:23 +0000] [30435] [INFO] Worker exiting (pid: 30435)
+[2016-07-22 11:35:23 +0000] [30427] [INFO] Shutting down: Master
+[2016-07-22 11:35:25 +0000] [31099] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:35:25 +0000] [31099] [INFO] Listening at: http://127.0.0.1:8001 (31099)
+[2016-07-22 11:35:25 +0000] [31099] [INFO] Using worker: sync
+[2016-07-22 11:35:25 +0000] [31104] [INFO] Booting worker with pid: 31104
+[2016-07-22 11:35:25 +0000] [31107] [INFO] Booting worker with pid: 31107
+[2016-07-22 11:36:38 +0000] [31099] [INFO] Handling signal: int
+[2016-07-22 23:36:39 +0000] [31104] [INFO] Worker exiting (pid: 31104)
+[2016-07-22 23:36:39 +0000] [31107] [INFO] Worker exiting (pid: 31107)
+[2016-07-22 11:36:39 +0000] [31099] [INFO] Shutting down: Master
+[2016-07-22 11:36:42 +0000] [31336] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:36:42 +0000] [31336] [INFO] Listening at: http://127.0.0.1:8001 (31336)
+[2016-07-22 11:36:42 +0000] [31336] [INFO] Using worker: sync
+[2016-07-22 11:36:42 +0000] [31341] [INFO] Booting worker with pid: 31341
+[2016-07-22 11:36:42 +0000] [31344] [INFO] Booting worker with pid: 31344
+[2016-07-22 11:44:18 +0000] [31336] [INFO] Handling signal: int
+[2016-07-22 23:44:18 +0000] [31344] [INFO] Worker exiting (pid: 31344)
+[2016-07-22 23:44:18 +0000] [31341] [INFO] Worker exiting (pid: 31341)
+[2016-07-22 11:44:18 +0000] [31336] [INFO] Shutting down: Master
+[2016-07-22 11:44:20 +0000] [32478] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:44:20 +0000] [32478] [INFO] Listening at: http://127.0.0.1:8001 (32478)
+[2016-07-22 11:44:20 +0000] [32478] [INFO] Using worker: sync
+[2016-07-22 11:44:20 +0000] [32483] [INFO] Booting worker with pid: 32483
+[2016-07-22 11:44:20 +0000] [32484] [INFO] Booting worker with pid: 32484
+[2016-07-22 11:44:53 +0000] [32478] [INFO] Handling signal: int
+[2016-07-22 23:44:53 +0000] [32483] [INFO] Worker exiting (pid: 32483)
+[2016-07-22 23:44:53 +0000] [32484] [INFO] Worker exiting (pid: 32484)
+[2016-07-22 11:44:53 +0000] [32478] [INFO] Shutting down: Master
+[2016-07-22 11:44:55 +0000] [32582] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 11:44:55 +0000] [32582] [INFO] Listening at: http://127.0.0.1:8001 (32582)
+[2016-07-22 11:44:55 +0000] [32582] [INFO] Using worker: sync
+[2016-07-22 11:44:55 +0000] [32587] [INFO] Booting worker with pid: 32587
+[2016-07-22 11:44:55 +0000] [32588] [INFO] Booting worker with pid: 32588
+[2016-07-22 15:55:38 +0000] [32582] [INFO] Handling signal: int
+[2016-07-23 03:55:38 +0000] [32587] [INFO] Worker exiting (pid: 32587)
+[2016-07-23 03:55:38 +0000] [32588] [INFO] Worker exiting (pid: 32588)
+[2016-07-22 15:55:39 +0000] [32582] [INFO] Shutting down: Master
+[2016-07-22 15:57:24 +0000] [4529] [INFO] Starting gunicorn 19.6.0
+[2016-07-22 15:57:24 +0000] [4529] [INFO] Listening at: http://127.0.0.1:8001 (4529)
+[2016-07-22 15:57:24 +0000] [4529] [INFO] Using worker: sync
+[2016-07-22 15:57:24 +0000] [4534] [INFO] Booting worker with pid: 4534
+[2016-07-22 15:57:24 +0000] [4535] [INFO] Booting worker with pid: 4535
+[2016-07-25 09:24:47 +0000] [4529] [INFO] Handling signal: int
+[2016-07-25 21:24:47 +0000] [4534] [INFO] Worker exiting (pid: 4534)
+[2016-07-25 21:24:47 +0000] [4535] [INFO] Worker exiting (pid: 4535)
+[2016-07-25 09:24:49 +0000] [4529] [INFO] Shutting down: Master
+[2016-07-25 09:24:58 +0000] [56771] [INFO] Starting gunicorn 19.6.0
+[2016-07-25 09:24:58 +0000] [56771] [INFO] Listening at: http://127.0.0.1:8001 (56771)
+[2016-07-25 09:24:58 +0000] [56771] [INFO] Using worker: sync
+[2016-07-25 09:24:58 +0000] [56776] [INFO] Booting worker with pid: 56776
+[2016-07-25 09:24:58 +0000] [56777] [INFO] Booting worker with pid: 56777
+[2016-07-25 10:28:16 +0000] [56771] [INFO] Handling signal: int
+[2016-07-25 22:28:17 +0000] [56776] [INFO] Worker exiting (pid: 56776)
+[2016-07-25 22:28:17 +0000] [56777] [INFO] Worker exiting (pid: 56777)
+[2016-07-25 10:28:17 +0000] [56771] [INFO] Shutting down: Master
+[2016-07-25 10:28:20 +0000] [949] [INFO] Starting gunicorn 19.6.0
+[2016-07-25 10:28:20 +0000] [949] [INFO] Listening at: http://127.0.0.1:8001 (949)
+[2016-07-25 10:28:20 +0000] [949] [INFO] Using worker: sync
+[2016-07-25 10:28:20 +0000] [954] [INFO] Booting worker with pid: 954
+[2016-07-25 10:28:20 +0000] [959] [INFO] Booting worker with pid: 959
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 73, in index
+    return render(request, 'blog/index.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/archive
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 150, in archive
+    return render(request, 'blog/archive.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/archive
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 150, in archive
+    return render(request, 'blog/archive.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 73, in index
+    return render(request, 'blog/index.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/archive
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 150, in archive
+    return render(request, 'blog/archive.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/archive
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 150, in archive
+    return render(request, 'blog/archive.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/archive
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 150, in archive
+    return render(request, 'blog/archive.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/archive
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 150, in archive
+    return render(request, 'blog/archive.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Internal Server Error: /blog/
+Traceback (most recent call last):
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/nginx/sleepycat/blog/views.py", line 73, in index
+    return render(request, 'blog/index.html', context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/usr/local/bbx_it/lib/python2.7/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+NoReverseMatch: Reverse for 'article' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['(?P<article_id>\\d+)/$']
+Not Found: /apple-touch-icon-120x120-precomposed.png
+Not Found: /apple-touch-icon-120x120.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon.png
+Not Found: /apple-touch-icon-precomposed.png
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /index
+Not Found: /index
+Not Found: /favicon.ico
+Not Found: /users/
+Not Found: /items/
+Not Found: /citys/
+Not Found: /users/
+Not Found: /favicon.ico
