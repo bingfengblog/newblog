@@ -18,8 +18,8 @@
 
 
 <body>
-<body>
-
+<div class="middle">
+<div class="header-image">
 <div class="header">
 <div class="wrap">
     <div class="logo">
@@ -31,8 +31,6 @@
         <p class="moto">In me the tiger,Sniffs the rose</p>
     </div>
     
-    <div class="search">
-    </div>
 </div>
 </div>
 
@@ -47,14 +45,14 @@
     </ul>
 </div>
 </div>
-
+</div>
 
 
 <div class="wrap">
     {% block content %}{% endblock %}
     <div class="top-bottom"> 
-    <a href="#top"><img style="position: fixed; bottom:160px; border: none;" alt="top" src="{% static 'blog/image/up.gif' %}"></img></a>
-    <a href="#bottom" onclick="GoBottom();return false;"><img style="position: fixed; bottom:120px;border: none;" alt="bottom" src="{% static 'blog/image/down.gif' %}"></img></a>
+    <a href="#top"><img style="position: fixed; bottom:160px; border: none;" alt="top" src="{% static 'blog/image/toup.jpg' %}"></img></a>
+    <a href="#bottom" onclick="GoBottom();return false;"><img style="position: fixed; bottom:120px;border: none;" alt="bottom" src="{% static 'blog/image/tobottom.jpg' %}"></img></a>
     </div> 
    <div class="sidebar">
         <div class="tagbar">
@@ -83,7 +81,7 @@
 
 <p id="bottom">©2015-2016 冰峰blog</p>
 
-
+</div>
 
 <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
