@@ -29,15 +29,15 @@ hr {
 
 
 a {
-    color: #2099AB;
+    color: #005059;
+    font-weight:bold;
     overflow: hidden;
     text-decoration: none;
     display: inline; /* do not show the dot of list */
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #066C75;
+    color: #ffab3c;
 }
 
 
@@ -144,7 +144,7 @@ div.content{
 div.article{
     width: 814px;
     padding: 0px 0px 0px 0px;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 0px 0px;
     background-color: #f9f9f9;
     color:#393939;
     height: 100%;
@@ -759,7 +759,12 @@ div.article_content p.archive_title {
      margin: 10px 0px 5px 0px; 
     padding: 0px 0px 2px 0px; 
 }
-
+p.last-article {
+  float:left;
+}
+p.next-article {
+  float:right;
+}
 @media only screen and (min-width: 320px) and (max-width: 1080px) {
      
 //     body  { overflow:hidden;}

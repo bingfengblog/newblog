@@ -29,9 +29,13 @@
     
    </div>
 </div>
-    
-    
-    
+     {% if last_article %}    
+     <p class='last-article'><a title="{{ article.title }}"  href="/blog/{{ article.id|add:-1 }}">上一篇:{{ last_article.title|truncatechars:50 }}</a></p> 
+     {% endif %}
+     {% if next_article %}
+     <p class='next-article'><a title="{{ article.title }}"  href="/blog/{{ article.id|add:1 }}">下一篇:{{ next_article.title|truncatechars:50 }}</a></p> 
+     {% endif %}
+     <br> 
     {% if comments %}
     <div class="article2">
     <div class="article_comments">
@@ -157,7 +161,7 @@
         <input type="hidden" name="to_comment_id" id="reply_to_comment" value="" />
     </form>  -->
     </div>
-    </div>
+</div>
 
 
     {% if comments.paginator.num_pages > 1 %}

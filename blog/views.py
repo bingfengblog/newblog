@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.views.decorators.csrf import csrf_exempt
-
+from django.core.exceptions import ObjectDoesNotExist
 import datetime
 
 import markdown2
@@ -172,39 +172,31 @@ def article(request, article_id, tag_slug=""):
     try:
         if tag_slug != "":
             article  = Article.objects.filter(tags__slug__exact=tag_slug).get(id=article_id)
+            
         else:
             article  = Article.objects.get(id=article_id)
     except Article.DoesNotExist:
         raise Http404
-    
-    comments = Comment.objects.filter(to_article__exact=article).order_by('datetime').reverse()
-    
-    article.cmts = len(comments)
-    # count articles in each tag. get active_tag
+
+    try:
+        last_article = Article.objects.get(id=int(article_id)-1)
+    except ObjectDoesNotExist:
+        last_article = None
+
+    try: 
+        next_article = Article.objects.get(id=int(article_id)+1)
+    except ObjectDoesNotExist:
+        next_article = None
 
     active_tag = None
     for tag in tags:
         if tag.slug == tag_slug:
             active_tag = tag
-    
-    
-    p = Paginator(comments, 100)
-    
-    page = request.GET.get('page')
-    try:
-        comments_this_page = p.page(page)
-    except PageNotAnInteger:
-        comments_this_page = p.page(1)
-    except EmptyPage:
-        comments_this_page = p.page(p.num_pages)
-    
     context  = {'article': article,
                 'tags': tags,
                 'active_tag': active_tag,
-                'comments': comments_this_page,
-                'allcomments': comments.reverse(),
-                'recentcmts': Comment.objects.order_by('datetime').reverse()[:5], 
-                
+                'last_article':last_article,
+                'next_article':next_article,
                 }
     return render(request, 'blog/article.html', context)
 
