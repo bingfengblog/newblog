@@ -744,6 +744,9 @@ div.footer p{
     margin: 5px;
     padding: 5px;
 }
+div.footer a {
+    color:#999999;
+}
 div.article_content a {
    font-weight: normal; 
    font-size:18px;
@@ -787,7 +790,7 @@ p.next-article {
      div.pagination a.active,div.pagination a.deactive,div.pagination a.active1,div.pagination span.deactive { padding:2px;}
      div.middle {width:98%;background-color:#000;}
      div.header{height:200px;}    
-     
+     p.next-article,p.last-article{float:none;display:block;}     
  
 }
 
