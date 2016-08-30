@@ -30,10 +30,10 @@
    </div>
 </div>
      {% if last_article %}    
-     <p class='last-article'><a title="{{ article.title }}"  href="/blog/{{ article.id|add:-1 }}">上一篇:{{ last_article.title|truncatechars:50 }}</a></p> 
+     <p class='last-article'><a title="{{ last_article.title }}"  href="/blog/{{ last_article.id}}">上一篇:{{ last_article.title|truncatechars:50 }}</a></p> 
      {% endif %}
      {% if next_article %}
-     <p class='next-article'><a title="{{ article.title }}"  href="/blog/{{ article.id|add:1 }}">下一篇:{{ next_article.title|truncatechars:50 }}</a></p> 
+     <p class='next-article'><a title="{{ next_article.title }}"  href="/blog/{{ next_article.id }}">下一篇:{{ next_article.title|truncatechars:50 }}</a></p> 
      {% endif %}
      <br> 
     {% if comments %}
